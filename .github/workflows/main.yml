@@ -49,4 +49,4 @@ jobs:
             sudo docker rm destimate
             sudo docker rmi ${{ secrets.DOCKERHUB_USERNAME }}/destimate:latest
             sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/destimate:latest
-            sudo docker run -d -p 8080:8080 -e CREDENTIALS=${{ secrets.CREDENTIALS }} -e OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }} -e DB_USERNAME=${{ secrets.DB_USERNAME }} -e DB_PASSWORD=${{ secrets.DB_PASSWORD }} -e DB_HOST=${{ secrets.DB_HOST }} -e DB_PORT=${{ secrets.DB_PORT }} -e DB_NAME=${{ secrets.DB_NAME }} -e SECRET_KEY=${{ secrets.SECRET_KEY }} -e SMTP_SERVER=${{ secrets.SMTP_SERVER }} -e SMTP_USERNAME=${{ secrets.SMTP_USERNAME }} -e SMTP_PASSWORD=${{ secrets.SMTP_PASSWORD }} -e SMTP_PORT=${{ secrets.SMTP_PORT }} --name destimate ${{ secrets.DOCKERHUB_USERNAME }}/destimate:latest
+            sudo docker run -d -p 8080:8080 --name destimate ${{ secrets.DOCKERHUB_USERNAME }}/destimate:latest
