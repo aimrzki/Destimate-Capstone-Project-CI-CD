@@ -96,13 +96,8 @@
                 <li class="nav-item"><a class="nav-link" href="#deleteTicketByAdmin">Delete Ticket By Admin</a></li>
                 <li class="nav-item"><a class="nav-link" href="#getBookingDataByInvoice">Get Booking Data by Invoice Admin</a></li>
                 <li class="nav-item"><a class="nav-link" href="#getTotalCarbonFootprintFromAllTransaction">Get Total CarbonFootprint From All Transaction</a></li>
-                <li class="nav-item"><a class="nav-link" href="#getTotalWisata">Get Total Wisata in Platform - Dashboard CMS</a></li>
-                <li class="nav-item"><a class="nav-link" href="#getTotalUser">Get Total User Terdaftar in Platform - Dashboard CMS</a></li>
-                <li class="nav-item"><a class="nav-link" href="#getTotalVisitor">Get Total Pengunjung tempat wisata Terdaftar in Platform - Dashboard CMS</a></li>
-                <li class="nav-item"><a class="nav-link" href="#getTotalTransaction">Get Total Transaction in Platform - Dashboard CMS</a></li>
                 <li class="nav-item"><a class="nav-link" href="#getTopWisata">Get Top 3  Wisata in Platform - Dashboard CMS</a></li>
                 <li class="nav-item"><a class="nav-link" href="#getTopUserCarbon">Get Top 3 User By Carbon Footprint in Platform - Dashboard CMS</a></li>
-                <li class="nav-item"><a class="nav-link" href="#getTotalRevenuePerMonth">Get Total Revenue in Platform - Dashboard CMS</a></li>
                 <li class="nav-item"><a class="nav-link" href="#getDashboard">Get Dashboard CMS</a></li>
                 <li class="nav-item"><a class="nav-link" href="#editWisataDataByAdmin">Edit Wisata Data By Admin</a></li>
                 <li class="nav-item"><a class="nav-link" href="#paidUpdate">Paid Status Update By Admin</a></li>
@@ -110,7 +105,6 @@
                 <li class="nav-item"><a class="nav-link" href="#deleteUserByAdmin">Delete User Data By Admin</a></li>
                 <li class="nav-item"><a class="nav-link" href="#getUserDataById">Get User Data By ID</a></li>
                 <li class="nav-item"><a class="nav-link" href="#getAllWisata">Get All Wisata Data</a></li>
-                <li class="nav-item"><a class="nav-link" href="#getAllWisataMobile">Get All Wisata Mobile Data</a></li>
                 <li class="nav-item"><a class="nav-link" href="#getAllKota">Get All Kota Data</a></li>
                 <li class="nav-item"><a class="nav-link" href="#getAllWisataWithUserPreference">Get All Wisata Data With User Preference</a></li>
                 <li class="nav-item"><a class="nav-link" href="#getWisataById">Get Wisata Data By ID</a></li>
@@ -145,7 +139,7 @@
             <h1 class="my-4">Destimate Sustain Tour Apps API Documentation</h1>
             <div id="endpoint" class="anchor">
                 <h2 class="my-4">Endpoint</h2>
-                <p><a href="https://destimate.uc.r.appspot.com/">https://destimate.uc.r.appspot.com/</a></p>
+                <p><a href="34.41.243.72:8080/">34.41.243.72:8080/</a></p>
             </div>
 
             <div id="register" class="card mb-4">
@@ -228,7 +222,7 @@
                 <div class="card-body">
                     <h2>Login Admin</h2>
                     <p><strong>URL</strong></p>
-                    <p><code>/admin/signin</code></p>
+                    <p><code>/admins/signin</code></p>
                     <p><strong>Method</strong></p>
                     <p><code>POST</code></p>
                     <p><strong>Request Body - Raw Json</strong></p>
@@ -256,7 +250,7 @@
                 <div class="card-body">
                     <h2>Added Wisata Data By Admin</h2>
                     <p><strong>URL</strong></p>
-                    <p><code>/wisata/create</code></p>
+                    <p><code>/tourism-attractions</code></p>
                     <p><strong>Method</strong></p>
                     <p><code>POST</code></p>
                     <p><strong>Body - Form Data</strong></p>
@@ -328,7 +322,7 @@
                 <div class="card-body">
                     <h2>Create Promo Voucher By Admin</h2>
                     <p><strong>URL</strong></p>
-                    <p><code>/createpromo</code></p>
+                    <p><code>/promos</code></p>
                     <p><strong>Method</strong></p>
                     <p><code>POST</code></p>
                     <p><strong>Form Data</strong></p>
@@ -374,7 +368,7 @@
                 <div class="card-body">
                     <h2>Edit Voucher Data By Admin</h2>
                     <p><strong>URL</strong></p>
-                    <p><code>/admin/promo/:id</code></p>
+                    <p><code>/promos/:id</code></p>
                     <p><strong>Method</strong></p>
                     <p><code>PUT - Admin dapat mengubah voucher promo yang tersedia</code></p>
                     <p><strong>form data</strong></p>
@@ -421,7 +415,7 @@
                 <div class="card-body">
                     <h2>Delete Promo Voucher By Admin</h2>
                     <p><strong>URL</strong></p>
-                    <p><code>/admin/promo/:id</code></p>
+                    <p><code>/promos/:id</code></p>
                     <p><strong>Method</strong></p>
                     <p><code>DELETE</code></p>
                     <p><strong>Note</strong></p>
@@ -443,7 +437,7 @@
                 <div class="card-body">
                     <h2>Create Category By Admin</h2>
                     <p><strong>URL</strong></p>
-                    <p><code>/createcategory</code></p>
+                    <p><code>/categories</code></p>
                     <p><strong>Method</strong></p>
                     <p><code>POST</code></p>
                     <p><strong>Request Body - Raw Json</strong></p>
@@ -474,7 +468,7 @@
                 <div class="card-body">
                     <h2>Update Category Data By Admin</h2>
                     <p><strong>URL</strong></p>
-                    <p><code>/admin/categories/:id</code></p>
+                    <p><code>/categories/:id</code></p>
                     <p><strong>Method</strong></p>
                     <p><code>PUT - Admin dapat mengubah category yang tersedia, misal ada typo</code></p>
                     <p><strong>raw json</strong></p>
@@ -505,7 +499,7 @@
                 <div class="card-body">
                     <h2>Delete Category By Admin</h2>
                     <p><strong>URL</strong></p>
-                    <p><code>/admin/categories/:id</code></p>
+                    <p><code>/categories/:id</code></p>
                     <p><strong>Method</strong></p>
                     <p><code>DELETE</code></p>
                     <p><strong>Note</strong></p>
@@ -526,7 +520,7 @@
                 <div class="card-body">
                     <h2>Create Terms and Condition By Admin</h2>
                     <p><strong>URL</strong></p>
-                    <p><code>/admin/tnc</code></p>
+                    <p><code>/terms-and-conditions</code></p>
                     <p><strong>Method</strong></p>
                     <p><code>POST</code></p>
                     <p><strong>Request Body - Raw Json</strong></p>
@@ -560,7 +554,7 @@
                 <div class="card-body">
                     <h2>Update Terms and Condition By Admin</h2>
                     <p><strong>URL</strong></p>
-                    <p><code>/admin/tnc/:id</code></p>
+                    <p><code>/terms-and-conditions/:id</code></p>
                     <p><strong>Method</strong></p>
                     <p><code>POST</code></p>
                     <p><strong>Request Body - Raw Json</strong></p>
@@ -588,7 +582,7 @@
                 <div class="card-body">
                     <h2>Delete Terms and Condition By Admin</h2>
                     <p><strong>URL</strong></p>
-                    <p><code>/admin/tnc/:id</code></p>
+                    <p><code>/terms-and-conditions/:id</code></p>
                     <p><strong>Method</strong></p>
                     <p><code>DELETE</code></p>
                     <p><strong>Note</strong></p>
@@ -608,7 +602,7 @@
                 <div class="card-body">
                     <h2>Get All User Data By Admin</h2>
                     <p><strong>URL</strong></p>
-                    <p><code>/admin/user</code></p>
+                    <p><code>/admins/users</code></p>
                     <p><strong>Method</strong></p>
                     <p><code>GET</code></p>
                     <p><strong>Request Body</strong></p>
@@ -657,7 +651,7 @@
                 <div class="card-body">
                     <h2>Get All Admin Data By Admin</h2>
                     <p><strong>URL</strong></p>
-                    <p><code>/admin</code></p>
+                    <p><code>/admins</code></p>
                     <p><strong>Method</strong></p>
                     <p><code>GET</code></p>
                     <p><strong>Request Body</strong></p>
@@ -705,7 +699,7 @@
                 <div class="card-body">
                     <h2>Edit User Data By Admin</h2>
                     <p><strong>URL</strong></p>
-                    <p><code>/admin/user/:id</code></p>
+                    <p><code>/admins/users/:id</code></p>
                     <p><strong>Method</strong></p>
                     <p><code>PUT - Admin dapat mengubah data user yang tersedia,(name,username,email,phone_number)</code></p>
                     <p><strong>raw json</strong></p>
@@ -735,7 +729,7 @@
                 <div class="card-body">
                     <h2>Get All Booking Data By Admin</h2>
                     <p><strong>URL</strong></p>
-                    <p><code>/admin/ticket</code></p>
+                    <p><code>/tickets</code></p>
                     <p><strong>Method</strong></p>
                     <p><code>GET</code></p>
                     <p><strong>Note</strong></p>
@@ -800,7 +794,7 @@
                 <div class="card-body">
                     <h2>Delete Ticket By Admin</h2>
                     <p><strong>URL</strong></p>
-                    <p><code>/admin/ticket/:invoice_number</code></p>
+                    <p><code>/tickets/:invoice_number</code></p>
                     <p><strong>Method</strong></p>
                     <p><code>DELETE</code></p>
                     <p><strong>Note</strong></p>
@@ -820,7 +814,7 @@
                 <div class="card-body">
                     <h2>Get User Wisata Booking Data By Invoice - Admin</h2>
                     <p><strong>URL</strong></p>
-                    <p><code>/admin/ticket/:invoiceNumber</code></p>
+                    <p><code>/tickets/:invoiceNumber</code></p>
                     <p>Example /admin/ticket/1699276681-632</p>
                     <p><strong>Method</strong></p>
                     <p><code>GET</code></p>
@@ -853,26 +847,6 @@
                 </div>
             </div>
 
-
-            <div id="getTotalCarbonFootprintFromAllTransaction" class="card mb-4 anchor">
-                <div class="card-body">
-                    <h2>Get total carbon footprint - Admin</h2>
-                    <p><strong>URL</strong></p>
-                    <p><code>/admin/carbonfootprint</code></p>
-                    <p><strong>Method</strong></p>
-                    <p><code>GET</code></p>
-                    <p><strong>Note</strong></p>
-                    <p><code>Include authorization token in headers.</code></p>
-                    <p><strong>Response</strong></p>
-                    <pre>
-    {
-        "code": 200,
-        "error": false,
-        "total_carbon_footprint": 5398.426832228703
-    }
-                            </pre>
-                </div>
-            </div>
 
 
             <div id="getTopUserCarbon" class="card mb-4 anchor">
@@ -915,32 +889,11 @@
             </div>
 
 
-            <div id="getTotalWisata" class="card mb-4 anchor">
-                <div class="card-body">
-                    <h2>Get total wisata in platform Dashboard - Admin</h2>
-                    <p><strong>URL</strong></p>
-                    <p><code>/totalwisata</code></p>
-                    <p><strong>Method</strong></p>
-                    <p><code>GET</code></p>
-                    <p><strong>Note</strong></p>
-                    <p><code>Include authorization token in headers.</code></p>
-                    <p><strong>Response</strong></p>
-                    <pre>
-    {
-        "code": 200,
-        "error": false,
-        "totalWisataCount": int
-    }
-                            </pre>
-                </div>
-            </div>
-
-
             <div id="getTopWisata" class="card mb-4 anchor">
                 <div class="card-body">
                     <h2>Get Top 3 Wisata in Platform - Admin</h2>
                     <p><strong>URL</strong></p>
-                    <p><code>/top/wisata</code></p>
+                    <p><code>/top/tourism-attractions</code></p>
                     <p><strong>Method</strong></p>
                     <p><code>GET</code></p>
                     <p><strong>Note</strong></p>
@@ -982,80 +935,11 @@
             </div>
 
 
-            <div id="getTotalUser" class="card mb-4 anchor">
-                <div class="card-body">
-                    <h2>Get total User in platform Dashbaord - Admin</h2>
-                    <p><strong>URL</strong></p>
-                    <p><code>/totaluser</code></p>
-                    <p><strong>Method</strong></p>
-                    <p><code>GET</code></p>
-                    <p><strong>Note</strong></p>
-                    <p><code>Include authorization token in headers.</code></p>
-                    <p><strong>Response</strong></p>
-                    <pre>
-    {
-        "code": 200,
-        "error": false,
-        "totalUserCount": int
-    }
-                            </pre>
-                </div>
-            </div>
-
-
-            <div id="getTotalTransaction" class="card mb-4 anchor">
-                <div class="card-body">
-                    <h2>Get total Transaction in platform Dashbaord - Admin</h2>
-                    <p><strong>URL</strong></p>
-                    <p><code>/totaltransaksi</code></p>
-                    <p><strong>Method</strong></p>
-                    <p><code>GET</code></p>
-                    <p><strong>Note</strong></p>
-                    <p><code>Include authorization token in headers.</code></p>
-                    <p><strong>Response</strong></p>
-                    <pre>
-    {
-        "code": 200,
-        "error": false,
-        "totalTicketPurchaseCount": 10
-    }
-                            </pre>
-                </div>
-            </div>
-
-            <div id="getTotalVisitor" class="card mb-4 anchor">
-                <div class="card-body">
-                    <h2>Get Total Pengunjung tempat wisata Terdaftar in Platform - Dashboard CMS</h2>
-                    <p><strong>URL</strong></p>
-                    <p><code>/totalvisitor</code></p>
-                    <p><strong>Method</strong></p>
-                    <p><code>GET</code></p>
-                    <p><strong>Note</strong></p>
-                    <p><code>Include authorization token in headers.</code></p>
-                    <p><strong>Response</strong></p>
-                    <pre>
-    {
-    "code": 200,
-    "data": [
-        {
-            "user_name": string,
-            "user_profile": string,
-            "purchassed": int,
-            "total_emition": float
-        }
-    ],
-    "error": false
-}
-                            </pre>
-                </div>
-            </div>
-
-
             <div id="getDashboard" class="card mb-4 anchor">
                 <div class="card-body">
                     <h2>Get Grafik Dashbaord CMS - Admin</h2>
                     <p><strong>URL</strong></p>
-                    <p><code>/grafik</code></p>
+                    <p><code>/dashboard</code></p>
                     <p><strong>Method</strong></p>
                     <p><code>GET</code></p>
                     <p><strong>Note</strong></p>
@@ -1104,39 +988,11 @@
             </div>
 
 
-            <div id="getGrafikSixMonth" class="card mb-4 anchor">
-                <div class="card-body">
-                    <h2>Get Grafik Indicator For Revenue In six month - Dashboard CMS Admin</h2>
-                    <p><strong>URL</strong></p>
-                    <p><code>/grafik</code></p>
-                    <p><strong>Method</strong></p>
-                    <p><code>GET</code></p>
-                    <p><strong>Note</strong></p>
-                    <p><code>Include authorization token in headers, tambahkan query params date dengan format year/month/date example 2023-11-08</code></p>
-                    <p><strong>Response</strong></p>
-                    <pre>
-             {
-                    "code": 200,
-                    "error": false,
-                    "monthlyIncome": {
-                    "August 2023": 0,
-                    "July 2023": 0,
-                    "June 2023": 0,
-                    "November 2023": 294000,
-                    "October 2023": 0,
-                    "September 2023": 0
-                },
-                    totalSixMonthsIncome": 294000
-             }
-                            </pre>
-                </div>
-            </div>
-
             <div id="editWisataDataByAdmin" class="card mb-4 anchor">
                 <div class="card-body">
                     <h2>Edit Wisata Data By Admin</h2>
                     <p><strong>URL</strong></p>
-                    <p><code>/admin/wisata/:id</code></p>
+                    <p><code>/tourism-attractions/:id</code></p>
                     <p><strong>Method</strong></p>
                     <p><code>PUT - Admin dapat mengubah hanya salah satu data atau lebih</code></p>
                     <p><strong>form data</strong></p>
@@ -1205,7 +1061,7 @@
                 <div class="card-body">
                     <h2>Paid Status Update by Admin</h2>
                     <p><strong>URL</strong></p>
-                    <p><code>/admin/ticket/:invoiceId</code></p>
+                    <p><code>/tickets/:invoiceId</code></p>
                     <p>Example /admin/ticket/1699274115-663</p>
                     <p><strong>Method</strong></p>
                     <p><code>PUT - Admin dapat mengubah status pembayaran</code></p>
@@ -1262,7 +1118,7 @@
                 <div class="card-body">
                     <h2>Delete Wisata Data By Id - Admin</h2>
                     <p><strong>URL</strong></p>
-                    <p><code>/admin/wisata/:id</code></p>
+                    <p><code>/tourism-attractions/:id</code></p>
                     <p><strong>Method</strong></p>
                     <p><code>DELETE</code></p>
                     <p><strong>Note</strong></p>
@@ -1282,7 +1138,7 @@
                 <div class="card-body">
                     <h2>Delete User Data By Id - Admin</h2>
                     <p><strong>URL</strong></p>
-                    <p><code>/admin/user/:id</code></p>
+                    <p><code>/admins/users/:id</code></p>
                     <p><strong>Method</strong></p>
                     <p><code>DELETE</code></p>
                     <p><strong>Note</strong></p>
@@ -1302,7 +1158,7 @@
                 <div class="card-body">
                     <h2>Get User Data By Id</h2>
                     <p><strong>URL</strong></p>
-                    <p><code>/user/:user_id</code></p>
+                    <p><code>/users/:user_id</code></p>
                     <p><strong>Method</strong></p>
                     <p><code>GET</code></p>
                     <p><strong>Request Body</strong></p>
@@ -1334,7 +1190,7 @@
                 <div class="card-body">
                     <h2>Get All Wisata Data</h2>
                     <p><strong>URL</strong></p>
-                    <p><code>/wisata</code></p>
+                    <p><code>/tourism-attractions</code></p>
                     <p><strong>Method</strong></p>
                     <p><code>GET</code></p>
                     <p><strong>params (adding pagination feature), Jika ingin menggunakan searching  berdasarkan title,category_name,kota gunakan query params (search) beserta value isiannya</strong></p>
@@ -1409,94 +1265,6 @@
             </div>
 
 
-
-            <div id="getAllWisataMobile" class="card mb-4 anchor">
-                <div class="card-body">
-                    <h2>Get All Wisata Mobile Data</h2>
-                    <p><strong>URL</strong></p>
-                    <p><code>/wisata/mobile</code></p>
-                    <p><strong>Method</strong></p>
-                    <p><code>GET</code></p>
-                    <p><strong>params (adding pagination feature), Jika ingin menggunakan searching  berdasarkan title,category_name,kota gunakan query params (title, category_name, kota)</strong></p>
-                    <pre>
-    {
-        "page": int, // untuk menentukan isi page
-        "limit": int // untuk menentukan limit isi dari setiap page
-        "title" : string, // Optional jika ingin searching berdasarkan title
-        "kota" : string, // Optional jika ingin searching berdasarkan kota
-        "category_name" : string // Optional jika ingin searching berdasarkan category_name
-    }
-                            </pre>
-                    <p><strong>Note</strong></p>
-                    <p><code>Include authorization token in headers.</code></p>
-                    <p><strong>Response</strong></p>
-                    <pre>
-    {
-        "code": 200,
-        "error": false,
-        "wisatas": [
-            {
-                "id": int,
-                "kode" : string,
-                "title": string,
-                "location": string,
-                "description": string,
-                "price": int,
-                "lat": float,
-                "long": float,
-                "user_id": int,
-                "available_tickets": int,
-                "photo_wisata1": string,
-                "photo_wisata2": string,
-                "photo_wisata3": string,
-                "category_id": int,
-                "category": {
-                    "id": int,
-                    "category_name": string,
-                    "created_at": time
-                },
-                "maps_link": string,
-                "is_open": bool,
-                "description_is_open": string,
-                "fasilitas": array,
-                "kode" : string,
-                "created_at": time,
-                "UpdatedAt": time
-            },
-            {
-                "id": int,
-                "kode" : string,
-                "title": string,
-                "location": string,
-                "description": string,
-                "price": int,
-                "lat": float,
-                "long": float,
-                "user_id": int,
-                "available_tickets": int,
-                "photo_wisata1": string,
-                "photo_wisata2": string,
-                "photo_wisata3": string,
-                "category_id": int,
-                "category": {
-                    "id": int,
-                    "category_name": string,
-                    "created_at": time
-                },
-                "maps_link": string,
-                "is_open": bool,
-                "description_is_open": string,
-                "fasilitas": array,
-                "kode" : string,
-                "created_at": time,
-                "UpdatedAt": time
-            },
-        ]
-    }
-                            </pre>
-                </div>
-            </div>
-
             <div id="getAllKota" class="card mb-4 anchor">
                 <div class="card-body">
                     <h2>Get All Kota Data</h2>
@@ -1526,7 +1294,7 @@
                 <div class="card-body">
                     <h2>Get All Wisata Data With User Preferences, menampilkan hanya yang kategori user suka</h2>
                     <p><strong>URL</strong></p>
-                    <p><code>/user/preferences</code></p>
+                    <p><code>/users/preferences</code></p>
                     <p><strong>Method</strong></p>
                     <p><code>GET</code></p>
                     <p><strong>Note</strong></p>
@@ -1601,7 +1369,7 @@
                 <div class="card-body">
                     <h2>Get Data Wisata By ID</h2>
                     <p><strong>URL</strong></p>
-                    <p><code>/wisata/:id</code></p>
+                    <p><code>/tourism-attractions/:id</code></p>
                     <p><strong>Method</strong></p>
                     <p><code>GET</code></p>
                     <p><strong>Note</strong></p>
@@ -1649,7 +1417,7 @@
                 <div class="card-body">
                     <h2>Get Total Carbon Footprint Berdasarkan Wisata ID</h2>
                     <p><strong>URL</strong></p>
-                    <p><code>/carbonfootprintwisata/:wisata_id</code></p>
+                    <p><code>/carbonfootprints/:wisata_id</code></p>
                     <p>Untuk menampilkan jumlah total carboon footprint setiap wisata berdasarkan ID nya</p>
                     <p><strong>Method</strong></p>
                     <p><code>GET</code></p>
@@ -1670,7 +1438,7 @@
                 <div class="card-body">
                     <h2>Get All Promo Data</h2>
                     <p><strong>URL</strong></p>
-                    <p><code>/user/promo</code></p>
+                    <p><code>/promos</code></p>
                     <p><strong>Method</strong></p>
                     <p><code>GET</code></p>
                     <p><strong>Note</strong></p>
@@ -1718,7 +1486,7 @@
                 <div class="card-body">
                     <h2>Get Promo Data With Id promo</h2>
                     <p><strong>URL</strong></p>
-                    <p><code>/user/promo/:id</code></p>
+                    <p><code>/promos/:id</code></p>
                     <p><strong>Method</strong></p>
                     <p><code>GET</code></p>
                     <p><strong>Note</strong></p>
@@ -1787,7 +1555,7 @@
                 <div class="card-body">
                     <h2>Get Total Carbon Footprint User</h2>
                     <p><strong>URL</strong></p>
-                    <p><code>/carbonfootprint/:user_id</code></p>
+                    <p><code>/user/carbonfootprint/:user_id</code></p>
                     <p><strong>Method</strong></p>
                     <p><code>GET</code></p>
                     <p><strong>Note</strong></p>
@@ -1808,7 +1576,7 @@
                 <div class="card-body">
                     <h2>Booking Wisata By User</h2>
                     <p><strong>URL</strong></p>
-                    <p><code>/user/buy</code></p>
+                    <p><code>/tourism-attractions/booking</code></p>
                     <p><strong>Method</strong></p>
                     <p><code>POST</code></p>
                     <p><strong>Request Body - Raw Json</strong></p>
@@ -1866,7 +1634,7 @@
                 <div class="card-body">
                     <h2>Cek harga total potongan total harga ke destinasi tujuan</h2>
                     <p><strong>URL</strong></p>
-                    <p><code>/cekharga</code></p>
+                    <p><code>/tourism-attractions/booking/check</code></p>
                     <p><strong>Method</strong></p>
                     <p><code>POST</code></p>
                     <p><strong>Request Body - Raw Json</strong></p>
@@ -1981,7 +1749,7 @@
                 <div class="card-body">
                     <h2>Get User Notification saat konfirmasi pembayaran dan promo</h2>
                     <p><strong>URL</strong></p>
-                    <p><code>/user/notification</code></p>
+                    <p><code>/notifications</code></p>
                     <p><strong>Method</strong></p>
                     <p><code>GET</code></p>
                     <p><strong>Note</strong></p>
@@ -2022,7 +1790,7 @@
                 <div class="card-body">
                     <h2>Mark As Read User Notification saat konfirmasi pembayaran dan promo</h2>
                     <p><strong>URL</strong></p>
-                    <p><code>/user/notification/:id</code></p>
+                    <p><code>/notifications/:id</code></p>
                     <p><strong>Method</strong></p>
                     <p><code>PUT</code></p>
                     <p><strong>Note</strong></p>
@@ -2043,7 +1811,7 @@
                 <div class="card-body">
                     <h2>Get User Wisata Booking Data History With Specific Invoice Number</h2>
                     <p><strong>URL</strong></p>
-                    <p><code>/user/wisata/:invoice_number</code></p>
+                    <p><code>/user/tickets/:invoice_number</code></p>
                     <p><strong>Method</strong></p>
                     <p><code>GET</code></p>
                     <p><strong>Note</strong></p>
@@ -2092,7 +1860,7 @@
                 <div class="card-body">
                     <h2>Get Point User </h2>
                     <p><strong>URL</strong></p>
-                    <p><code>/user/points</code></p>
+                    <p><code>/points</code></p>
                     <p><strong>Method</strong></p>
                     <p><code>GET</code></p>
                     <p><strong>Note</strong></p>
@@ -2113,7 +1881,7 @@
                 <div class="card-body">
                     <h2>Get Point User History </h2>
                     <p><strong>URL</strong></p>
-                    <p><code>/user/points/history</code></p>
+                    <p><code>/points/history</code></p>
                     <p><strong>Method</strong></p>
                     <p><code>GET</code></p>
                     <p><strong>Note</strong></p>
@@ -2146,7 +1914,7 @@
                 <div class="card-body">
                     <h2>Get Terms and Conditions Data </h2>
                     <p><strong>URL</strong></p>
-                    <p><code>/tnc</code></p>
+                    <p><code>/terms-and-conditions</code></p>
                     <p><strong>Method</strong></p>
                     <p><code>GET</code></p>
                     <p><strong>Note</strong></p>
@@ -2175,7 +1943,7 @@
                 <div class="card-body">
                     <h2>Get Terms and Conditions Data By ID </h2>
                     <p><strong>URL</strong></p>
-                    <p><code>/tnc/:id</code></p>
+                    <p><code>/terms-and-conditions/:id</code></p>
                     <p><strong>Method</strong></p>
                     <p><code>GET</code></p>
                     <p><strong>Note</strong></p>
@@ -2204,7 +1972,7 @@
                 <div class="card-body">
                     <h2>Change Password User Data By ID</h2>
                     <p><strong>URL</strong></p>
-                    <p><code>/user/change-password/:id</code></p>
+                    <p><code>/users/change-password/:id</code></p>
                     <p><strong>Method</strong></p>
                     <p><code>PUT</code></p>
                     <p><strong>Request Body</strong></p>
@@ -2233,7 +2001,7 @@
                 <div class="card-body">
                     <h2>Update Location User Data By ID</h2>
                     <p><strong>URL</strong></p>
-                    <p><code>/userlocation/:id</code></p>
+                    <p><code>/users/:id/change-location</code></p>
                     <p><strong>Method</strong></p>
                     <p><code>PUT</code></p>
                     <p><strong>Request Body - Raw Json</strong></p>
@@ -2266,7 +2034,7 @@
                 <div class="card-body">
                     <h2>Edit User Data By ID</h2>
                     <p><strong>URL</strong></p>
-                    <p><code>/user/:id</code></p>
+                    <p><code>/users/:id</code></p>
                     <p><strong>Method</strong></p>
                     <p><code>PUT - User dapat mengubah hanya salah satu data</code></p>
                     <p><strong>form data</strong></p>
@@ -2309,7 +2077,7 @@
                 <div class="card-body">
                     <h2>Menghapus Foto Profil User</h2>
                     <p><strong>URL</strong></p>
-                    <p><code>/user/photo/id</code></p>
+                    <p><code>/users/photo/:id</code></p>
                     <p><strong>Method</strong></p>
                     <p><code>DELETE</code></p>
                     <p><strong>Note</strong></p>
@@ -2329,7 +2097,7 @@
                 <div class="card-body">
                     <h2>Pembatalan booking ticket</h2>
                     <p><strong>URL</strong></p>
-                    <p><code>/user/ticket/:invoice_number</code></p>
+                    <p><code>/tourism-attractions/cancel/:invoice_number</code></p>
                     <p><strong>Method</strong></p>
                     <p><code>DELETE</code></p>
                     <p><strong>Note</strong></p>
@@ -2350,7 +2118,7 @@
                 <div class="card-body">
                     <h2>Chatbot Access Powered By OpenAI GPT 3.5</h2>
                     <p><strong>URL</strong></p>
-                    <p><code>/chatbot/recommend-wisata</code></p>
+                    <p><code>/users/chatbot</code></p>
                     <p><strong>Method</strong></p>
                     <p><code>POST</code></p>
                     <p><strong>Request Body - Raw Json</strong></p>
@@ -2372,7 +2140,7 @@
                 <div class="card-body">
                     <h2>Chatbot Access Powered By OpenAI GPT 3.5 for CMS</h2>
                     <p><strong>URL</strong></p>
-                    <p><code>/chatbot/recommend-promo</code></p>
+                    <p><code>/admin/chatbot</code></p>
                     <p><strong>Method</strong></p>
                     <p><code>POST</code></p>
                     <p><strong>Request Body - Raw Json</strong></p>
@@ -2395,7 +2163,7 @@
                 <div class="card-body">
                     <h2>CMS Pengunjung dapat mengirim Pesan Kerja Sama / pertanyaan, tanpa harus login</h2>
                     <p><strong>URL</strong></p>
-                    <p><code>/cooperation</code></p>
+                    <p><code>/cooperations</code></p>
                     <p><strong>Method</strong></p>
                     <p><code>POST</code></p>
                     <p><strong>Request Body - Raw Json</strong></p>
@@ -2426,7 +2194,7 @@
                 <div class="card-body">
                     <h2>Get semua pesan kerjasama atau masukan dari pengunjung web CMS - admin </h2>
                     <p><strong>URL</strong></p>
-                    <p><code>/cooperation</code></p>
+                    <p><code>/cooperations</code></p>
                     <p><strong>Method</strong></p>
                     <p><code>GET</code></p>
                     <p><strong>Note</strong></p>

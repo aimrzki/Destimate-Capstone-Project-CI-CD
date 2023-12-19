@@ -1,13 +1,14 @@
 package routes
 
 import (
-	"github.com/labstack/echo/v4"
-	"gorm.io/gorm"
 	"io/ioutil"
 	"log"
 	"myproject/controllers"
 	"net/http"
 	"os"
+
+	"github.com/labstack/echo/v4"
+	"gorm.io/gorm"
 )
 
 func ServeHTML(c echo.Context) error {
@@ -46,17 +47,17 @@ func SetupRoutes(e *echo.Echo, db *gorm.DB) {
 	e.GET("/promos/:id", controllers.GetPromoByID(db, secretKey))                                       // Menampilkan data detail promo yang tersedia - CMS & Mobile
 
 	//Landing Page
-	e.POST("/cooperation", controllers.CreateCooperationMessage(db)) // Mengirimkan pesan kepada destimate dari landingpage
+	e.POST("/cooperations", controllers.CreateCooperationMessage(db)) // Mengirimkan pesan kepada destimate dari landingpage
 
 	//Dashboard CMS
-	e.GET("/dashboard", controllers.GetAdminDashboardData(db, secretKey)) // Menampilkan data grafik dan angka di dashboard yang berisi (Pendapatan, total pengguna, total destinasi, total pengunjung, total pemesanan)
-	e.GET("/top/wisata", controllers.GetTopWisata(db, secretKey))         // Menampilkan data tempat wisata yang paling banyak dikunjungi
-	e.GET("/top/emition", controllers.GetTopEmition(db, secretKey))       // Menampilkan data user dengan perolehan emisi karbon paling sedikit
+	e.GET("/dashboard", controllers.GetAdminDashboardData(db, secretKey))      // Menampilkan data grafik dan angka di dashboard yang berisi (Pendapatan, total pengguna, total destinasi, total pengunjung, total pemesanan)
+	e.GET("/top/tourism-attractions", controllers.GetTopWisata(db, secretKey)) // Menampilkan data tempat wisata yang paling banyak dikunjungi
+	e.GET("/top/emition", controllers.GetTopEmition(db, secretKey))            // Menampilkan data user dengan perolehan emisi karbon paling sedikit
 
 	//Admin CMS
 	e.POST("/admins/signin", controllers.AdminSignin(db, secretKey))                      // Login Admin - CMS
 	e.GET("/profile", controllers.GetProfile(db, secretKey))                              // Get profile admin - CMS
-	e.GET("/admin", controllers.GetAllAdminsByAdmin(db, secretKey))                       // Menampilkan seluruh data admin - CMS
+	e.GET("/admins", controllers.GetAllAdminsByAdmin(db, secretKey))                      // Menampilkan seluruh data admin - CMS
 	e.GET("/admins/users", controllers.GetAllUsersByAdmin(db, secretKey))                 // Menampilkan seluruh data user - CMS
 	e.PUT("/admins/users/:id", controllers.EditUserByAdmin(db, secretKey))                // Mengubah data user - CMS
 	e.DELETE("/admins/users/:id", controllers.DeleteUserByAdmin(db, secretKey))           // Menghapus akun user oleh admin - CMS
@@ -91,7 +92,7 @@ func SetupRoutes(e *echo.Echo, db *gorm.DB) {
 	e.POST("/signin", controllers.Signin(db, secretKey))                                                    // Login - Mobile
 	e.GET("/users/:user_id", controllers.GetUserDataByID(db, secretKey))                                    // Menampilkan profile user - Mobile
 	e.PUT("/users/:id", controllers.EditUser(db, secretKey))                                                // Mengubah profile user - Mobile
-	e.PUT("/users/change-password", controllers.ChangePassword(db, secretKey))                              // Mengubah password akun user - Mobile
+	e.PUT("/users/change-password/:id", controllers.ChangePassword(db, secretKey))                          // Mengubah password akun user - Mobile
 	e.DELETE("/users/photo/:id", controllers.DeleteUserProfilePhoto(db, secretKey))                         // Menghapus foto profile user - Mobile
 	e.PUT("/users/:id/change-location", controllers.EditUserLocation(db, secretKey))                        // Mengubah lokasi user - Mobile
 	e.GET("/users/preferences", controllers.GetWisataByCategoryKesukaan(db, secretKey))                     // Menampilkan halaman utama user sesuai wisata preferensinya saat match making diawal - Mobile
